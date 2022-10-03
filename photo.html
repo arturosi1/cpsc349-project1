@@ -8,13 +8,12 @@ pagination:
 permalink: "/{{photo.id}}/"
 ---
 <body style="color: white;background: {{photo.avg_color}}">
-<h1 style= "font-size: 40px; color: white;text-align: center">{{title}}</h1>
+<h1 style= "font-size: 40px; color: white;text-align: center">{{photo.alt}}</h1>
 
-
+  <p style = "padding-left: 300px"> <img src="{{photo.src.landscape}}" alt="{{photo.alt}}"> </p>
   <p style= "color: white;text-align: center"> {{ photo.id }} </p>
   <p style= "color: white;text-align: center"> {{photo.photographer_url}} </p>
   <p style= "color: white;text-align: center"> Photographer - {{photo.photographer}} </p>
-  <p style = "padding-left: 300px"> <img src="{{photo.src.landscape}}" alt="{{photo.alt}}"> </p>
 
   <nav>
       {% if pagination.href.previous %}
